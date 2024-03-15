@@ -1,19 +1,27 @@
 ## Квик Дил, тестовое задание (Артур М.)
 
-Инструкция по установке и запуску. Скачать GIT-репозиторий. Создать новый *.env* файл (из *.env.example*).
+Скачать проект
+
+    git clone https://github.com/older777/quickdeal.git
+
+Создать новый *.env* файл (из *.env.example*).
+
+    cp .env.example .env
 
 Выполнить следующие команды:
 
+    cd quickdeal
     composer install
     php artisan vendor:publish 
     # ресурсы всех вендров: All providers and tags
     php artisan sail:publish
-    ./sail build --no-cache
+    ./sail build
     ./sail up
 
     (в новом окне терминала)
     ./sail artisan migrate
     ./sail artisan db:seed
+    ./sail artisan storage:link
     ./sail npm install
     ./sail npm run dev
 
